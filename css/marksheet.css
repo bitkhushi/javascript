@@ -1,0 +1,26 @@
+body {
+  background-color: #c5cae9;
+  padding: 25px;
+
+}
+
+
+
+table {
+  margin: 0 auto;
+
+}
+
+
+th {
+  padding: 12px;
+  border: 2px dotted;
+  color: red;
+}
+
+td {
+  padding: 12px;
+  border: 2px dotted;
+  color: blue;
+
+}
