@@ -1,0 +1,41 @@
+.box {
+    height: 300px;
+    width: 700px;
+    background-color: brown;
+    margin-top: 50px;
+    display: flex;
+}
+
+#box1,
+#box2 {
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    margin: 40px;
+    color: azure;
+    font-size: 80px;
+    text-align: center;
+}
+
+.box i {
+    padding-top: 82px;
+    font-size: 30px;
+}
+
+input {
+    height: 35px;
+    width: 155px;
+    margin-top: 77px;
+    margin-left: 46px;
+}
+
+.btn {
+    margin-top: 22%;
+    margin-left: -23%;
+}
+
+.btn button {
+    height: 32px;
+    width: 89px;
+}
+

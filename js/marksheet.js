@@ -4,7 +4,7 @@ let english = parseInt(prompt("please enter marks of english subject"));
 let hindi = parseInt(prompt("please enter marks of hindi subject"));
 let math = parseInt(prompt("please enter marks of math subject"));
 let gujarati= parseInt(prompt("please enter marks of gujarati subject"));
-let   = parseInt(prompt("please enter marks of science subject"));
+let science  = parseInt(prompt("please enter marks of science subject"));
 
 let total;
 

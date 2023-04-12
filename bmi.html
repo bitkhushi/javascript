@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,39 @@
     <link rel="stylesheet" href="./css/bmi.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <form action="">
-       <label>Height : </label> <input type="text" name="height" id="height" placeholder="cm">
-       <br><br>
-       <label>Weight : </label> <input type="text" name="weight" id="weight" placeholder="kg">
-
+        <h1>BMI Calculater</h1>
+        <br>
+        <h3>What is Your Gender?</h3>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        
+        <br><br><br>
+        <label>Height : </label> <input type="number" name="height" id="height" placeholder="Enter Your height in cm">
         <br><br>
-       <div class="btn">
-        <button onclick="calculate()">Calculate</button>
-       </div>
+        <label>Weight : </label> <input type="number" name="weight" id="weight" placeholder="Enter Your Weight in Kg">
 
+        <br><br><br>
+        <div class="btn">
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        <br><br>
+           <h2> Your BMI Answer Is Below</h2>
+
+           <!-- <input type="text" id="answer" placeholder="Your Answer is here"> -->
+        <div id="answer">
+          
+        </div>
     </form>
-
-
-    <script>
-        if(weight <= 16){
-            document.getElementById("weight").innerHTML="Severe Thinness"
-        }
-    </script>
+    
+    
+   
 
 
     <script src="./js/bmi.js"></script>
 </body>
+
 </html>
