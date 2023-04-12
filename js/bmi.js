@@ -27,12 +27,3 @@ function calculate() {
     console.log(bmical);
     console.log(answer);
 }
-
-
-
-
-
-
-
-
-
