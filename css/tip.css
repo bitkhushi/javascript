@@ -1,19 +1,67 @@
-.cal{
-    height: 500px;
+.container{
+    height: 550px;
     width: 500px;
     border-radius: 10px;
     background-color: blueviolet;
     margin: 0 auto;
-
+    /* display: flex; */
 }
+
 h1{
     text-align: center;
 }
-label{
+.cal {
+    
+    padding-top: 16px;
+    padding-left: 50px;
+  
+}
+.input_data {
+    margin-left: 70px;
+    text-align: center;
+    
+    margin-top: 25px;
+}
+.cal_data{
+    display: flex;
+}
+h3 {
+    padding-bottom: 35px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+input {
+    margin: 18px;
+    height: 47px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: saddlebrown;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 24px;
+}
+button{
+    padding: 18px;
+}
+/* label{
     color: bisque;
     padding: 20px;
     font-size: 25px;
 
 }
-
+input {
+   
+    height: 40px;
+    justify-content: center;
+    margin-left: 248px;
+    text
+    display: block;
+    /* z-index: 999; */
+    color: black;
+} */
 

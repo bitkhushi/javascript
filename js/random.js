@@ -16,13 +16,15 @@ function handledata() {
 
     if (z == answer){
         
-        alert("Youe answer is correct")
+        alert("Youe answer is correct");
 
         
     } else {
         alert("Youe answer is incorrect ,Your Correct Answer is : "+z+" ");
 
     }
+
+ 
 
     location.reload();
 }
