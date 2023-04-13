@@ -5,25 +5,28 @@ function calculate() {
     let bmical;
     convert = height / 100;
     bmical = weight / (convert * convert);
-   
+    let answer=bmical.toFixed(2)
 
-    if(bmical > 17 && bmical < 18.5){
+    if(answer > 17 && answer < 18.5){
         document.getElementById("answer").innerHTML = "Thin ness"
         
-    }else if (bmical > 18.5 && bmical < 25) {
+    }else if (answer > 18.5 && answer < 25) {
       document.getElementById("answer").innerHTML = "Normal";
 
-    }else if (bmical > 25 && bmical < 30) {
+    }else if (answer > 25 && answer < 30) {
         document.getElementById("answer").innerHTML = "Overweight";
 
     }else{
         document.getElementById("answer").innerHTML = "Severe Thinness";
 
     }
+    document.getElementById("bmianswer").innerHTML = answer;
 
     console.log(height);
     console.log(weight);
     console.log(convert);
     console.log(bmical);
     console.log(answer);
+
+    return false;
 }

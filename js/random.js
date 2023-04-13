@@ -15,9 +15,7 @@ function handledata() {
     let answer = document.getElementById("answer").value;
 
     if (z == answer){
-        // let res = prompt("your answer is correct");
-        // document.getElementById("ans").innerHTML= "your answer is correct";
-        // let science  = parseInt(prompt("please enter marks of science subject"));
+        
         alert("Youe answer is correct")
 
         
@@ -26,10 +24,10 @@ function handledata() {
 
     }
 
-  
+    location.reload();
 }
-console.log(z);
-console.log(ans);
+// console.log(z);
+// console.log(ans);
 
 
 
