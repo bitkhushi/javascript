@@ -9,16 +9,13 @@ function data(){
     parseInt(document.getElementById("atip").value = total);
     parseInt(document.getElementById("tbill").value = totalbill);
 
-    if (bill == null || bill == "") {
-    //    var y= document.getElementById("msg").innerHTML = "enter";
-        alert("enter");
-        // return false;
-    } else if(pertip == null || pertip == ""){
-    //    var y= document.getElementById("msg").innerHTML = "thankyou";
-        alert("enter");
+    if(bill == "" || pertip == ""){
+        alert("PLEASE FILL THE INFORMATION");
     }else{
-        alert("thankyou");
+        alert("THANK YOU");
     }
+
+    
     console.log(bill, pertip, total, totalbill);
 
 
