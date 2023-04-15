@@ -1,0 +1,11 @@
+.container {
+    text-align: center;
+}
+
+
+#myselect {
+    padding: 36px;
+    font-size: 22px;
+    border: 2px solid black;
+    border-radius: 20px;
+}

@@ -23,5 +23,4 @@ function handle() {
 
     location.reload();
 
-
 }

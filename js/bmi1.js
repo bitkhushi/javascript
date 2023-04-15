@@ -13,7 +13,7 @@ function cal() {
 
     console.log(w, h, meter, bmi, answer);
 
-    document.getElementById("result").innerHTML = answer
+    document.getElementById("result").innerHTML = answer;
 
     if (answer < 18.5) {
         document.getElementById("msg").innerHTML = "Underweight"

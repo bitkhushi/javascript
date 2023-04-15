@@ -50,7 +50,7 @@
 
 // condition ? true stmt : false stmt 
 
-console.log((5 > 10)?("yes"):("no"));
+// console.log((5 > 10)?("yes"):("no"));
 
 
 // let x = 10;

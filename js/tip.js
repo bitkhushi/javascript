@@ -1,4 +1,4 @@
-function data(){
+function data() {
     let bill = parseInt(document.getElementById("bill").value);
     let pertip = parseInt(document.getElementById("pertip").value);
     let total;
@@ -7,15 +7,17 @@ function data(){
     totalbill = bill + total;
 
     parseInt(document.getElementById("atip").value = total);
-    parseInt(document.getElementById("tbill").value = totalbill);
+    parseInt(document.getElementById("tbill").value = totalbill);   
 
-    if(bill == "" || pertip == ""){
+
+    // console.log(isNaN(bill));
+    if (isNaN(bill) || isNaN(pertip)) {
         alert("PLEASE FILL THE INFORMATION");
-    }else{
+    } else {
         alert("THANK YOU");
     }
 
-    
+
     console.log(bill, pertip, total, totalbill);
 
 
