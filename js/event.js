@@ -51,7 +51,16 @@ function emailfocus() {
 
 emailref.addEventListener('focus',emailfocus);
 
+// window.onload= function(){
+//     console.log("page loded");
+// }
+window.onunload= function(){
+    console.log("page unloded");
+}
 
+window.onresize=function(){
+    console.log("page resized");
+}
 
 
 
