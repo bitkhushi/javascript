@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" onsubmit="return false">
+        <label for="FEES">FEES</label><input type="text" placeholder="Enter Your Fees" id="fees">
+        <br><br>
+        <label for="CGPA">CGPA</label><input type="text" placeholder="Enter Your CGPA" id="cgpa">
+        <br><br>
+        <label for="CAST">CAST</label>
+        <select name="" id="myinput" >
+            <option value="0">---SELECT CAST---</option>
+            <option value="Open" id="opencast">Open</option>
+            <option value="OBC" id="obccast">OBC</option>
+            <option value="SC" id="sccast">SC</option>
+            <option value="ST" id="stcast">ST</option>
+        </select>
+
+        <br><br>
+        <button id="submit" onclick="submitdata()">SUBMIT</button>
+        <span id="msg"></span>
+        <span id="feesmsg"></span>
+
+    </form>
+
+    <script src="./js/gradecast.js"></script>
+</body>
+</html>

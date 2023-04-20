@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         /* input {
@@ -17,42 +20,70 @@
         }
 
         input {
-            height: 80px;
-            width: 13%;
+            height: 58px;
+            width: 74%;
             text-align: center;
             font-size: 14px;
             outline: none;
-            /* border: 1px solid grey; */
+            margin-left: 47px;
+            border-radius: 6px;
         }
-        input:focus{
+
+        input:focus {
             border-color: pink;
         }
-        h2{
+
+        h2 {
             text-align: center;
         }
-        .frmdgn{
-            text-align: center;
+
+
+        #frm {
+            height: 500px;
+            width: 400px;
+            border: 2px solid green;
+            background-color: azure;
+            border-radius: 10px;
+            margin: 0 auto;
+
+
         }
-       
+
+        i {
+            cursor: pointer;
+            position: absolute;
+            
+        }
+        #iconpassword{
+            position: absolute;
+        }
+
     </style>
 </head>
 
 
 <body>
-    <h2>FORM</h2>
+
 
     <div class="frmdgn">
         <form action="" id="frm">
-
+            <h2>Login</h2>
             <input type="text" name="fname" id="fname" placeholder="ENTER FIRST NAME"><br><br>
-            <span id="msg"></span><br><br>
+            <span id="msg"></span><br>
             <input type="text" name="lname" id="lname" placeholder="ENTER LAST NAME"><br><br>
-            <span id="lmsg"></span><br><br>
-            <input type="submit" id="submitdesc" >
-            <input type="password" placeholder="Password">
-    
-    
-    
+            <span id="lmsg"></span><br>
+
+            <input type="password" placeholder="Password" id="pass1">
+          <div id="iconpassword">
+            <i class="fa-sharp fa-regular fa-eye" id="open" onclick="icon()"></i>
+            <i class="fa-regular fa-eye-slash" id="close" onclick="icon()"></i>
+          </div><br>
+            <span id="passmsg"></span>
+            <br><br><br>
+            <input type="submit" id="submitdesc">
+
+
+
         </form>
     </div>
 
