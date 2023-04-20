@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #datatable {
+            margin: 0 auto;
+            height: 400px;
+        }
+
+        td {
+            width: 200px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1.5px solid black;
+
+        }
+
+        th {
+            background-color: rgb(104, 104, 233);
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        .data {
+            text-align: center;
+        }
+
+        tr {
+            border-radius: 10px;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            background-color: cadetblue;
+        }
+
+        input {
+            width: 182px;
+            height: 58px;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        button {
+            width: 119px;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 37px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>INCOMETAX CALCULATER</h1>
+    <table id="datatable">
+        <tr>
+            <th>INCOME TAX SLAB</th>
+            <th>INCOME TAX RATE</th>
+            <th>TAX</th>
+        </tr>
+        <tr>
+            <td>Up to Rs.3lakh</td>
+            <td>Nill</td>
+            <td id="one"></td>
+        </tr>
+        <tr>
+            <td>Rs.3lakh - Rs.6lakh</td>
+            <td>5%</td>
+            <td id="two"></td>
+        </tr>
+        <tr>
+            <td>Rs.6lakh - Rs.9lakh</td>
+            <td>10%</td>
+            <td id="three"></td>
+        </tr>
+        <tr>
+            <td>Rs.9lakh - Rs.12lakh</td>
+            <td>15%</td>
+            <td id="four"></td>
+        </tr>
+        <tr>
+            <td>Rs.12lakh - Rs.15lakh</td>
+            <td>20%</td>
+            <td id="five"></td>
+        </tr>
+        <tr>
+            <td>Above Rs.15lakh</td>
+            <td>30%</td>
+            <td id="six"></td>
+        </tr>
+    </table>
+    <br><br><br>
+    <div class="data">
+        <label for="">INCOMETAX :</label> <input type="text" placeholder="enter your income tax" id="tex">
+        <br><br>
+        <span id="msg"></span>
+        <br><br>
+        <button onclick="submitdata()">SUBMIT</button>
+    </div>
+
+    <script src="./js/tax.js"></script>
+</body>
+
+</html>

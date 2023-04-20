@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        form {
+            background-color: aquamarine;
+            height: 500px;
+            width: 500px;
+            border-radius: 10px;
+
+        }
+        label{
+            text-align: center;
+        }
+        input{
+            text-align: center;
+            height: 50px;
+            width: 150px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-bottom: 21px;
+
+        }
+        #myinput{
+            border-radius: 10px;
+            height: 50px;
+            width: 150px;
+            border: 2px solid black;
+            margin-bottom: 21px;
+            text-align: center;
+
+
+        }
+        button {
+            width: 119px;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 29px;
+
+        }
+        .data{
+            text-align: center;
+            padding: 42px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h2>SCHOLARSHIP CALCULATER</h2>
     <form action="" onsubmit="return false">
-        <label for="FEES">FEES</label><input type="text" placeholder="Enter Your Fees" id="fees">
+       <div class="data">
+        <label for="FEES">FEES : </label><input type="text" placeholder="Enter Your Fees" id="fees">
         <br><br>
-        <label for="CGPA">CGPA</label><input type="text" placeholder="Enter Your CGPA" id="cgpa">
+        <label for="CGPA">CGPA : </label><input type="text" placeholder="Enter Your CGPA" id="cgpa">
         <br><br>
-        <label for="CAST">CAST</label>
-        <select name="" id="myinput" >
+        <label for="CAST">CAST : </label>
+        <select name="" id="myinput">
             <option value="0">---SELECT CAST---</option>
             <option value="Open" id="opencast">Open</option>
             <option value="OBC" id="obccast">OBC</option>
@@ -23,12 +70,15 @@
         </select>
 
         <br><br>
-        <button id="submit" onclick="submitdata()">SUBMIT</button>
-        <span id="msg"></span>
-        <span id="feesmsg"></span>
+        <button id="submit" onclick="submitdata()">SUBMIT</button><br><br>
+        <span id="msg"></span><br><br>
+        <span id="feesmsg"></span><br><br>
+        <span id="grade"></span><br><br>
+       </div>
 
     </form>
 
     <script src="./js/gradecast.js"></script>
 </body>
+
 </html>
