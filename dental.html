@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #userinput {
+            width: 200px;
+            height: 57px;
+            border: 2px solid black;
+            border-radius: 10px
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>DENTAL CLINIC</h2>
+    <select name="" id="userinput" onchange="handledata()">
+        <option value="0" >---Select Treatment---</option>
+        <option value="Teeth_Cleaning">Teeth_Cleaning</option>
+        <option value="Fillings" id="fl">Fillings</option>
+        <option value="Root_Canal_Treatment" id="rct">Root_Canal_Treatment</option>
+        <option value="RCT + Cover" id="rcc">RCT + Cover</option>
+        <option value="Braces/Invisalign" id="bi">Braces/Invisalign</option>
+    </select>
+    <button id="submitdata" onclick="submitdata()">SUBMIT</button>
+    <br><br><br>
+    <table id="trtdata" border="1">
+        <tr>
+            <th>Treament</th>
+            <th>seating</th>
+            <th>costing</th>
+        </tr>
+        <tr>
+            <td id="trt"></td>
+            <td id="seat"></td>
+            <td id="cos"></td>
+        </tr>
+    </table>
+
+
+    <script src="./js/dental.js"></script>
+</body>
+
+</html>

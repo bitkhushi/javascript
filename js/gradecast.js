@@ -25,6 +25,7 @@ function submitdata() {
     } else if (cgpa <= 7) {
         
         alert("YOU ARE NOT ELIGIBLE FOR SCHOLARSHIP");
+        document.getElementById("msg").style.display='none';
 
     }else{}
 
@@ -48,7 +49,7 @@ function submitdata() {
         }else{}
     }
 
-    document.getElementById("msg").innerHTML=" YOUR GRADE IS :  " + grade + " " +"  YOU WILL GET  " + scholarship + "  scholarship  ";
+    document.getElementById("msg").innerHTML=" YOUR GRADE IS :  " + grade + " " +"  YOU WILL GET  " + answer + "  scholarship  " + " You have to pay " + scholarship;
 }
 
 
