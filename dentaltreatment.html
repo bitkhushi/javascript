@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #user {
+            display: none;
+        }
+
+        .tbl {
+            text-align: center;
+            height: 500px;
+            width: 400px;
+            background-color: aquamarine;
+            border: 2px solid black;
+            margin: 0 auto;
+            border-radius: 10px;
+
+        }
+
+        table {
+            margin: 0 auto;
+            border-radius: 10px;
+            border: 2px solid black;
+
+        }
+
+        #userinput {
+            border-radius: 10px;
+            text-align: center;
+            height: 56px;
+            width: 164px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tbl">
+        <h2>DENTAL CLINIC</h2>
+        <select name="" id="userinput" onchange="handletreatment()">
+            <option value="0">---Select Treatment---</option>
+            <option value="Tc">Teeth Cleaning</option>
+            <option value="Fl">Fillings</option>
+            <option value="Rct">Root Canal Treatment</option>
+            <option value="Rct+c">RCT + Cover</option>
+            <option value="Br">Braces/Invisalign</option>
+        </select>
+        <br><br>
+        <div id="user">
+            <table border="dotted">
+                <tr>
+                    <th>Treatment</th>
+                    <th>Seating</th>
+                    <th>Costing</th>
+                </tr>
+                <tr>
+                    <td id="trt"></td>
+                    <td id="st"></td>
+                    <td id="cost"></td>
+                </tr>
+            </table>
+            <br><br>
+            <input type="date" id="aptdate">
+            <br><br>
+            <button id="book">BOOK APPOINTMENT</button>
+
+        </div>
+    </div>
+
+
+    <script src="./js/dentaltreatment.js"></script>
+</body>
+
+</html>

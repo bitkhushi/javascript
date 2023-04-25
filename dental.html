@@ -13,6 +13,16 @@
             border: 2px solid black;
             border-radius: 10px
         }
+
+        #trtdatatable{
+            display: none;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        #tbl{
+            display: none;
+        }
     </style>
 </head>
 
@@ -20,27 +30,57 @@
 
     <h2>DENTAL CLINIC</h2>
     <select name="" id="userinput" onchange="handledata()">
-        <option value="0" >---Select Treatment---</option>
-        <option value="Teeth_Cleaning">Teeth_Cleaning</option>
+        <option value="0">---Select Treatment---</option>
+        <option value="Teeth Cleaning">Teeth Cleaning</option>
         <option value="Fillings" id="fl">Fillings</option>
-        <option value="Root_Canal_Treatment" id="rct">Root_Canal_Treatment</option>
+        <option value="Root Canal Treatment" id="rct">Root Canal Treatment</option>
         <option value="RCT + Cover" id="rcc">RCT + Cover</option>
         <option value="Braces/Invisalign" id="bi">Braces/Invisalign</option>
     </select>
-    <button id="submitdata" onclick="submitdata()">SUBMIT</button>
+    <!-- <button id="submitdata" onclick="submitdata()">SUBMIT</button> -->
     <br><br><br>
-    <table id="trtdata" border="1">
-        <tr>
-            <th>Treament</th>
-            <th>seating</th>
-            <th>costing</th>
-        </tr>
-        <tr>
-            <td id="trt"></td>
-            <td id="seat"></td>
-            <td id="cos"></td>
-        </tr>
-    </table>
+    <div id="trtdatatable">
+        <table id="trtdata" border="1">
+            <tr>
+                <th>Treament</th>
+                <th>seating</th>
+                <th>costing</th>
+            </tr>
+            <tr>
+                <td id="trt"></td>
+                <td id="seat"></td>
+                <td id="cos"></td>
+            </tr>
+        </table>
+        <br><br><br>
+        <input type="date" name="" id="dates" placeholder="Enter your date">
+        <br><br>
+        <button id="bookapt" onclick="bookapt()">BOOK</button>
+        <br><br><br>
+        <div id="tbl">
+            <table border="1" id="userdate">
+                <tr>
+    
+                    <th>Sr No</th>
+    
+                    <th>date</th>
+    
+                    <th>charge</th>
+    
+                </tr>
+                <tr>
+                    <td id="sr1"></td>
+                    <td id="datetbl"></td>
+                    <!-- <td id="datetbl2"></td> -->
+                    <td id="charge"></td>
+                </tr>
+               
+            </table>
+        </div>
+
+    </div>
+    <br><br><br>
+
 
 
     <script src="./js/dental.js"></script>
