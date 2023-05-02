@@ -51,9 +51,9 @@ const handledate =()=>{
     let per_se=final_c/final_s;
     console.log(d,final_t,final_s,final_c,per_se);
 
-   
-    for(i=0;i<=final_s;i++){
-        let aptdate = new Date(d);
+    let aptdate = new Date(d);
+    for(i=1;i<=final_s;i++){
+       
         aptdate.setDate(aptdate.getDate()+7)
         console.log(aptdate); 
     }
