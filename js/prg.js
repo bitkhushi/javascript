@@ -113,69 +113,73 @@
 
 // sortspe(arr4, 4)
 
-// let a1 = [10, 20, 30, 40, 50]
-// let a2 = [10, 20, 35, 40, 50]
+let a1 = [10, 20, 30, 40, 50]
+let a2 = [10, 20, 35, 40, 50]
 
-// const equalarr = (a, b) => {
+const equalarr = (a, b) => {
 
-//     console.log(a.length);
-//     console.log(b.length);
-//     // flag==0
+    console.log(a.length);
+    console.log(b.length);
+    // flag==0
 
-//     if (a.length === b.length) {
-//         let i;
-//         let flag=0;
-//         for (let i = 0; i < a.length; i++) {
+    if (a.length === b.length) {
+        // let i;
+        // let flag=0;
+        for (let i = 0; i < a.length; i++) {
 
-//                 if (a[i] !== b[i] ) {
-//                     flag = 1;
-//                     break;
-//                 }
-
-
-//         }
-
-//         if(a[i] === b[i]){
-//             console.log("Array are equal");
-//         }else{
-//             console.log('array are not equal');
-
-//         }
-//     } else {
-//         console.log('array are not equal');
-//     }
-//  }
+                if (a[i] !== b[i] ) {
+                    let flag = 1;
+                    break;
+                }
 
 
+        }
+        // if(flag = 0){
+        //     console.log("Array are equal");
+        // }else{
+        //     console.log('array are not equal');
+        // }
 
-// equalarr(a1, a2)
+        // if(a[i] === b[i]){
+        //     console.log("Array are equal");
+        // }else{
+        //     console.log('array are not equal');
 
-let arr = [10, 20, 60, 41]
-
-const median = (a) => {
-
-    let sortA = a.sort((a, b) => a - b);
-    console.log(sortA);
-
-
-    let i = Math.floor(sortA.length / 2);
-    if (sortA.lenght %2 === 0) {
-
-        console.log(sortA[i]);
-        console.log(sortA[i-1]);
-        // console.log(i);
-        // let answer = (sortA[i] + sortA[i - 1]) / 2;
-        // console.log(answer);
-
+        // }
     } else {
-        console.log(sortA[i]);
+        console.log('array are not equal');
     }
+ }
 
 
-}
+
+equalarr(a1, a2)
+
+// let arr = [10, 20, 60, 41]
+
+// const median = (a) => {
+
+//     let sortA = a.sort((a, b) => a - b);
+//     console.log(sortA.length);
+//     console.log(sortA);
+//     let i= Math.floor(sortA.length/2);
+
+//     if(sortA.length %2 ===0){
+//         let ans = (sortA[i] + sortA[i-1])/2;
+//         console.log(ans);
+
+//     }else{
+        
+//         console.log(sortA[i]);
+//     }
 
 
-median(arr);
+
+
+// }
+
+
+// median(arr);
 
 
 

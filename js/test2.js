@@ -1,4 +1,5 @@
 let formref = document.getElementById("todo-form");
+let btn = document.getElementById("btn");
 
 let arr=[];
 const handleform = () =>{
@@ -15,9 +16,9 @@ const handleform = () =>{
     arr.map((v)=>{
         console.log(v);
 
-        print += '<li>' + v + '</li>';
+        print += '<li>' + v + '<button>' + close + '</button>'+ '</li>';
         document.getElementById("answer").innerHTML=print;
-        console.log(print);
+        // console.log(print);
     });
 
     print += '</ul>';
@@ -25,9 +26,32 @@ const handleform = () =>{
 
 
     event.preventDefault();
+
+}
+const handleclose=()=>{ 
+
+    // let close1=document.getElementById("ans");
+    // console.log(close1);
+
+    arr.splice(arr[1]);
+    console.log(arr);
+   
+    // arr.map((v)=>{
+    //     // console.log(v);
+    //     arr.pop()
+    //     console.log(arr);
+    // })
+
+    // let kk = document.getElementById("ans");
+    // console.log(kk);
+    
 }
 
 formref.addEventListener("submit",handleform)
+btn.addEventListener("click",handleclose)
+
+
+
 
 
 
