@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #frm {
+            border: 2px solid black;
+            height: 200px;
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 23px;
+
+        }
+
+        #icondata {
+            display: flex;
+            /* margin: 20px; */
+
+            text-align: center;
+            justify-content: center;
+        }
+
+        #icondata h2 {
+            color: cadetblue;
+
+        }
+
+        input {
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        button {
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        #iconimage {
+            padding: 20px;
+        }
+
+        #frmdesgin {
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 500px;
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: cornsilk;
+
+        }
+
+        #frmdata {
+            text-align: center;
+            background-color: lightgrey;
+
+        }
+
+        #frmdata h1 {
+            color: cadetblue;
+
+        }
+
+        #frmdata p {
+            color: darkgreen;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="frmdesgin">
+        <form action="" id="frm">
+            <div id="frmdata">
+                <h1>BUDGET APP</h1>
+                <p> Please Enter Your Budget </p>
+                <input type="number" placeholder="enter your budget" id="userbuddata">
+                <br><br>
+                <!-- <input type="submit" id="submitdata" placeholder="Calculate"> -->
+                <button id="submitdata" type="submit">Calculate</button>
+            
+            </div>
+        </form>
+
+        <div id="icondata">
+            <div id="iconimage">
+                <h2>BUDGET</h2>
+                <i class="fa-solid fa-sack-dollar"></i>
+                <div id="dollarbudget"></div>
+            </div>
+            <div id="iconimage">
+                <h2>EXPENSE</h2>
+                <i class="fa-solid fa-money-check"></i>
+                <div id="expensebudget"></div>
+            </div>
+            <div id="iconimage">
+                <h2>BALANCE</h2>
+                <i class="fa-solid fa-dollar-sign"></i>
+                <div id="balancebudget"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/budget.js"></script>
+</body>
+
+</html>

@@ -1,8 +1,12 @@
-
+My Drive
 // let person = {
 
 //     name: "amit",
 //     age: 25 
+// }
+
+// for(let k in person){
+//     console.log(person[k]);
 // }
 
 // console.log(person.name);
@@ -60,6 +64,16 @@
 //     }
 // }
 
+// for (let k in myObj){
+//     if(k === 'cars'){
+//         for(let j in myObj[k]){
+//             console.log(myObj[k][j]);
+//         }
+//     }else{
+//         console.log(myObj[k]);
+//     }
+// }
+
 // console.log(myObj.name, myObj.age);
 
 // console.log(myObj.cars.car2);
@@ -101,6 +115,7 @@
 //         }
 //     }
 // ];
+
 // person.map((t) => {
 //     console.log(t.name,t.age);
 //     console.log(t.course.a);
@@ -131,7 +146,22 @@ let data = {
         },
         b4: {
             admission: 40,
-            vacant_seat : 10
+            vacant_seat: 10
+        }
+    }
+}
+
+for (let k in data) {
+    // console.log(data[k]);
+    if (k === 'personal_info') {
+        console.log(data[k].name, data[k].age, data[k].city);
+    } else if (k === 'courses') {
+        data[k].map((j) => {
+            console.log(j);
+        })
+    } else if (k === 'branches') {
+        for (let x in data[k]) {
+            console.log(data[k][x].admission, data[k][x].vacant_seat);
         }
     }
 }
@@ -142,7 +172,33 @@ let data = {
 // console.log(data.courses);
 // console.log(data.branches.b1.admission);
 
+// const person = [
+//     {
+//         name: "amit",
+//         age: 19,
+//         course: {
+//             c1: "c",
+//             c2: "html"
+//         }
+//     },
+//     {
+//         name: "mayur",
+//         age: 20,
+//         course: {
+//             c1: "c",
+//             c2: "html"
+//         }
+//     }
+// ];
 
+
+// person.map((v) => {
+//     console.log(v.name, v.age);
+//     for (let x in v.course) {
+//         console.log(v.course[x]);
+//     }
+
+// });
 
 
 
