@@ -11,7 +11,7 @@ const handleonload = () => {
     let dollarbudgettxtref = document.createTextNode("$0");
 
 
-    dollarbudgetref.appendChild(dollarbudgettxtref);
+    // dollarbudgetref.appendChild(dollarbudgettxtref);
 
     let dollarbudget = document.getElementById("dollarbudget");
 
@@ -62,7 +62,7 @@ const handlesubmitdata = () => {
 
 const handleexpamt = () => {
 
-    document.getElementById("tbldisdata").style.display = " block"
+
     let exref = document.getElementById("expenseinput").value;
     let expamt = document.getElementById("expamtinput").value;
 
@@ -111,7 +111,7 @@ const handleexpamt = () => {
     console.log(expense);
 
     handlebalancedata();
-    
+   
 
 
     event.preventDefault();
@@ -130,21 +130,16 @@ const handlebalancedata = () => {
 
     });
 
+    
+
+    document.getElementById("expensebudget").innerHTML = "$"+total;
+
     let budgetp = document.getElementById("userbuddata").value;
 
-    if(budgetp > total){
-        document.getElementById("expensebudget").innerHTML = "$"+total;
+    answer = budgetp - total;
+    console.log(answer);
 
-   
-
-        answer = budgetp - total;
-        console.log(answer);
-    
-        document.getElementById("balancebudget").innerHTML = "$" + answer;
-    }else{
-        alert("check your expense amount");
-    }
-   
+    document.getElementById("balancebudget").innerHTML = "$" + answer;
 
    
 
@@ -162,16 +157,3 @@ handleexpenseamt.addEventListener("submit", handleexpamt)
 
 
 window.onload = handleonload;
-
-// document.getElementById("expensebudget").innerHTML = "$"+total;
-
-// let budgetp = document.getElementById("userbuddata").value;
-
-// answer = budgetp - total;
-// console.log(answer);
-
-// document.getElementById("balancebudget").innerHTML = "$" + answer;
-
-
-
-// event.preventDefault();

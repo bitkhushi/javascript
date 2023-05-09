@@ -49,7 +49,7 @@
         #frmdesgin {
             border: 2px solid black;
             border-radius: 10px;
-            height: 500px;
+            height: 900px;
             width: 500px;
             margin: 0 auto;
             margin-top: 20px;
@@ -72,6 +72,10 @@
             color: darkgreen;
 
         }
+        #tbldisdata{
+            display: none;
+        }
+        
     </style>
 </head>
 
@@ -90,6 +94,37 @@
             </div>
         </form>
 
+        <form action="" id="frmexpense">
+            <p>Please enter your Expense</p>
+            <input type="text" placeholder="enter your expense" id="expenseinput"><br>
+            <p>Please enter your Expense Amount</p><br>
+            <input type="number" placeholder="enter your expense amount" id="expamtinput"><br>
+            <br>
+            <input type="submit">
+
+        </form>
+        <br><br>
+
+        <table border="1" id="tbldisdata">
+
+            <thead>
+                <tr>
+                    <th>EXPENSE NAME</th>
+                    <th>EXPENSE COST</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="tbldata">
+                
+            </tbody>
+            
+          
+
+           
+            
+
+        </table>
+        <br><br><br>
         <div id="icondata">
             <div id="iconimage">
                 <h2>BUDGET</h2>
@@ -112,9 +147,7 @@
     </div>
 
 
-
-
-    <script src="./js/budget.js"></script>
+<script src="./js/budget.js"></script>
 </body>
 
 </html>
