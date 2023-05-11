@@ -1,6 +1,12 @@
 let handleexpenseamt = document.getElementById("frmexpense");
+// let handleexpenseamt = document.getElementById("frm");
+
+// let frmexpense = document.getElementById("frmexpense");
+// let frmexpense = document.getElementById("frmexpense");
 let expense = [];
 let total = 0;
+let update = false;
+let updateid = null;
 const handleonload = () => {
 
     let calculateref = document.getElementById("frm");
@@ -59,7 +65,6 @@ const handlesubmitdata = () => {
     event.preventDefault();
     console.log("nnnn");
 }
-
 const handleexpamt = () => {
 
     document.getElementById("tbldisdata").style.display = " block"
@@ -69,8 +74,12 @@ const handleexpamt = () => {
 
     console.log(exref, expamt);
 
-
+    let rno = Math.floor(Math.random()*100);
+    console.log(rno);
     let trref = document.createElement("tr");
+    trref.setAttribute("id" , "row"+ rno);
+   
+
 
     let tdcost = document.createElement("td");
 
@@ -82,10 +91,15 @@ const handleexpamt = () => {
 
     let costtxt = document.createTextNode(exref);
 
-    let tdaction1 = document.createElement("button");
-    let tdaction2 = document.createElement("button");
-    let tdac1txt = document.createTextNode("edit");
-    let tdac2txt = document.createTextNode("delete");
+
+    let tdaction1 = document.createElement("i");
+    let tdaction2 = document.createElement("i");
+    tdaction1.setAttribute("class","fa-solid fa-pen-to-square");
+    tdaction2.setAttribute("class","fa-solid fa-trash");
+
+    tdaction2.setAttribute("onclick", "handleremove("+ rno +")");
+    tdaction1.setAttribute("onclick", "handleedit("+ rno +")")
+ 
 
 
     tdcost.appendChild(costtxt);
@@ -93,8 +107,7 @@ const handleexpamt = () => {
     trref.appendChild(tdcost);
     trref.appendChild(tdamt);
     trref.appendChild(actd);
-    tdaction1.appendChild(tdac1txt);
-    tdaction2.appendChild(tdac2txt);
+  
     actd.appendChild(tdaction1);
     actd.appendChild(tdaction2);
 
@@ -104,6 +117,7 @@ const handleexpamt = () => {
     tbdy.appendChild(trref);
 
     expense.push({
+        id : rno,
         name: exref,
         cost: expamt,
 
@@ -112,14 +126,14 @@ const handleexpamt = () => {
 
     handlebalancedata();
     
-
+  
 
     event.preventDefault();
 }
 
 const handlebalancedata = () => {
     let total = 0;
-    let answer = 0
+    let answer = 0;
     expense.map((v) => {
 
 
@@ -132,46 +146,115 @@ const handlebalancedata = () => {
 
     let budgetp = document.getElementById("userbuddata").value;
 
-    if(budgetp > total){
-        document.getElementById("expensebudget").innerHTML = "$"+total;
+    if (budgetp > total) {
+        document.getElementById("expensebudget").innerHTML = "$" + total;
 
-   
 
         answer = budgetp - total;
         console.log(answer);
-    
-        document.getElementById("balancebudget").innerHTML = "$" + answer;
-    }else{
-        alert("check your expense amount");
-    }
-   
 
-   
+        document.getElementById("balancebudget").innerHTML = "$" + answer;
+    } else {
+        alert("check your expense amount");
+        document.getElementById("expamtinput").value = '';
+    }
+
+
+
 
     event.preventDefault();
 
 }
 
+const handleremove =(rno)=>{
+
+    let trrefrm = document.getElementById("row" + rno);
+    trrefrm.remove();
+    console.log(trrefrm);
+
+    // expense.map((v, i)=>{
+    //     if (v.id === rno){
+    //         expense.splice(i, 1 )
+    //     }             
+    // });
+
+    // console.log((expense));
+
+    let fdata = expense.filter((v , i)=> v.id != rno);
+
+    expense = [...fdata];
+
+    console.log(expense);
+
+
+   
+}
+
+const handleedit = (rno) => {
+
+    console.log(rno);
+
+    let exin = document.getElementById("expenseinput");
+    let examin = document.getElementById("expamtinput");
+
+    expense.map((v) => {
+        if (rno === v.id) {
+            exin.value = v.name;
+            examin.value = v.cost;
+        }
+    });
+    console.log(expense);
+    update = true;
+    id = rno;
 
 
 
-handleexpenseamt.addEventListener("submit", handleexpamt)
+
+    event.preventDefault();
+}
+
+const exupdate = ()=>{
+    console.log("kkk");
+    event.preventDefault();
+}
+
+// const exupdatedata = () => {
+
+//     let exin = document.getElementById("expenseinput").value;
+//     let examin = document.getElementById("expamtinput").value;
+
+//     expense.map((v) => {
+//         if (v.id === id) {
+//             v.expenseName = exin;
+//             v.ExpenseCost = examin;
+//         }
+//     });
+
+//     console.log(expense);
+
+//     update = false;
+//     id = null;
+
+//     event.preventDefault();
+// }
+
+// const handledes = (rno) => {
+//     if (update) {
+//         exupdatedata();
+//     } else {
+//         handlesubmitdata();
+//     }
+
+//     event.preventDefault();
+// }
+
+
+
+// frmexpense.addEventListener("submit", handledes);
+handleexpenseamt.addEventListener("submit", handleexpamt);
 
 
 
 
 
 window.onload = handleonload;
-
-// document.getElementById("expensebudget").innerHTML = "$"+total;
-
-// let budgetp = document.getElementById("userbuddata").value;
-
-// answer = budgetp - total;
-// console.log(answer);
-
-// document.getElementById("balancebudget").innerHTML = "$" + answer;
-
-
-
-// event.preventDefault();

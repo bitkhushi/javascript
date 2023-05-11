@@ -1,24 +1,26 @@
 
-// let rollno=[3,6,9,10,22,50]
-// let arr=[33,99,88,77,44]
+let rollno=[3,6,9,10,22,50]
+let arr=[33,99,88,77,44]
 
-// console.log(Array.isArray(rollno)); // check passed value is array or not
+console.log(Array.isArray(rollno)); // check passed value is array or not
 
 
 
 // let ans = rollno.concat(arr) //combine two or more array
 // console.log(ans);
 
-// let ans = arr.some ( (v)=> v > 5) 
+// let ans = arr.some( (v)=> v > 5) 
 
 
 // console.log(ans);
 
 // console.log(arr.toString());
 
-const color = ["blue","pink","orange","yellow"]
+const color = ["blue","pink","orange","yellow"];
 
 color.splice(1 , 0 ,"purple","green");
+
+console.log(color);
 
 
 
