@@ -1,17 +1,14 @@
 let handleexpenseamt = document.getElementById("frmexpense");
-// let handleexpenseamt = document.getElementById("frm");
-
-// let frmexpense = document.getElementById("frmexpense");
-// let frmexpense = document.getElementById("frmexpense");
+let calculateref = document.getElementById("frm");
 let expense = [];
 let total = 0;
 let update = false;
-let updateid = null;
+let uid = null;
 const handleonload = () => {
 
-    let calculateref = document.getElementById("frm");
+    // let calculateref = document.getElementById("frm");
 
-    calculateref.setAttribute("onsubmit", "handlesubmitdata()");
+    // calculateref.setAttribute("onsubmit", "handlesubmitdata()");
 
     let dollarbudgetref = document.createElement("span");
     let dollarbudgettxtref = document.createTextNode("$0");
@@ -66,6 +63,8 @@ const handlesubmitdata = () => {
     console.log("nnnn");
 }
 const handleexpamt = () => {
+
+
 
     document.getElementById("tbldisdata").style.display = " block"
     let exref = document.getElementById("expenseinput").value;
@@ -161,6 +160,7 @@ const handlebalancedata = () => {
 
 
 
+    // handleedit();
 
     event.preventDefault();
 
@@ -190,68 +190,56 @@ const handleremove =(rno)=>{
    
 }
 
-const handleedit = (rno) => {
+const handleedit = (rno)=>{
 
-    console.log(rno);
+    // console.log("llll");
+   
+   let fdata= expense.filter((v,i)=>v.id ===rno);
 
+   
+   let txt =fdata[0].name;
+   let txt1=fdata[0].cost;
+
+   document.getElementById("expenseinput").value=txt;
+   document.getElementById("expamtinput").value=txt1;
+  
+    uid = rno;
+    //  document.getElementById("expenseinput").innerHTML = v.name;
+
+    event.preventDefault();
+   
+}
+const handleupdatedata =()=>{
     let exin = document.getElementById("expenseinput");
     let examin = document.getElementById("expamtinput");
 
-    expense.map((v) => {
-        if (rno === v.id) {
-            exin.value = v.name;
-            examin.value = v.cost;
+    let udata = expense.map((v)=>{
+        if(v.id === uid){
+            return{
+                id : uid,
+                name :exin,
+                cost : examin 
+            }
+        }else{
+            return v;
         }
+        console.log(udata);
     });
-    console.log(expense);
-    update = true;
-    id = rno;
-
-
-
-
-    event.preventDefault();
+    
+    handleedit(); 
+}
+const handleexdes = ()=>{
+    if(update){
+        handleupdatedata();
+    }else{
+        handleexpamt();
+    }
 }
 
-const exupdate = ()=>{
-    console.log("kkk");
-    event.preventDefault();
-}
-
-// const exupdatedata = () => {
-
-//     let exin = document.getElementById("expenseinput").value;
-//     let examin = document.getElementById("expamtinput").value;
-
-//     expense.map((v) => {
-//         if (v.id === id) {
-//             v.expenseName = exin;
-//             v.ExpenseCost = examin;
-//         }
-//     });
-
-//     console.log(expense);
-
-//     update = false;
-//     id = null;
-
-//     event.preventDefault();
-// }
-
-// const handledes = (rno) => {
-//     if (update) {
-//         exupdatedata();
-//     } else {
-//         handlesubmitdata();
-//     }
-
-//     event.preventDefault();
-// }
+calculateref.addEventListener("submit", handlesubmitdata);
+handleexpenseamt.addEventListener("submit", handleexdes);
 
 
-
-// frmexpense.addEventListener("submit", handledes);
-handleexpenseamt.addEventListener("submit", handleexpamt);
 
 
 
