@@ -47,14 +47,14 @@ const formadd = () => {
 }
 
 const formremove = (id) => {
-
+    
     let rnoref = document.getElementById("row - " + id);
     rnoref.remove();
 
     let fname = document.getElementsByName("fname");
     let lname = document.getElementsByName("lname");
 
-
+    
     
     for (let i = 0; i < fname.length; i++) {
         arr.splice({ fname: fname[i ,0].value, lname: lname[i,0].value })
@@ -62,6 +62,7 @@ const formremove = (id) => {
     console.log(arr);
 
     event.preventDefault();
+
 }
 
 const handlesubmit = () => {

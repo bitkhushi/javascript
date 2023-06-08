@@ -75,6 +75,7 @@ const handleremove = ()=>{
 
 const handlereadd=()=>{
     console.log("mmmm");
+    handleplus()
 }
 
 frmref.addEventListener("submit",handlesubmitdata)

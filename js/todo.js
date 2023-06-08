@@ -38,6 +38,7 @@ const handleprint = () => {
     if(localdata){
         print = '<ul>';
         localdata.map((v, i) => {
+            
             console.log(v);
     
             print += '<li>' + v + '<button onclick="handleremove(' + i + ')">x</button>' + '<button onclick="handleupdate(' + i + ')">u</button>' + '</li>';
